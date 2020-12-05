@@ -9,17 +9,17 @@ var midAir = false
 
 func get_input():
 	velocity.x = 0
-	var jump = Input.is_action_just_pressed("jump")
-	var head = Input.is_action_just_pressed("action1")
+	var jumpInput = Input.is_action_just_pressed("jump")
+	var headInput = Input.is_action_just_pressed("action1")
 	var shake = Input.is_action_just_pressed("action2")
 	var stomp = Input.is_action_just_pressed("action3")
 
-	if jump and is_on_floor():
+	if jumpInput and is_on_floor():
 		$AnimationPlayer.play("Jump")
 		midAir = true
 		velocity.y = jump_speed
 	
-	if head:
+	if headInput:
 		$AnimationPlayer.play("Headbang")
 	elif shake:
 		$AnimationPlayer.play("Tailshake")
