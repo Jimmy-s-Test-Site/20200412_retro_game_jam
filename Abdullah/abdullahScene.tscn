@@ -4,10 +4,10 @@
 [ext_resource path="res://Abdullah/download.jpg" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 34.9, 5.8 )
+extents = Vector2( 4.6, 1.8 )
 
 [node name="Node2D" type="Node2D"]
-scale = Vector2( 10, 10 )
+scale = Vector2( 60, 60 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2.4, 0.9 )
@@ -16,10 +16,10 @@ position = Vector2( 2.4, 0.9 )
 position = Vector2( 0.4, 2.4 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 7, 7.5 )
-scale = Vector2( 0.249091, 0.0680328 )
+position = Vector2( 4.05, 1.4 )
+scale = Vector2( 0.0345455, 0.0153005 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 7.7, 7 )
+position = Vector2( 3.98333, 1.8 )
 shape = SubResource( 1 )
