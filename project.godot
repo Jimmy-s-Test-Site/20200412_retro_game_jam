@@ -19,6 +19,13 @@ config/name="RetroGameJam_20200412"
 run/main_scene="res://Abdullah/abdullahScene.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=96
+window/size/height=96
+window/size/test_width=384
+window/size/test_height=384
+
 [input]
 
 jump={
