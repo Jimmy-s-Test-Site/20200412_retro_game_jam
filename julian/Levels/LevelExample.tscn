@@ -1,12 +1,14 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://julian/Levels/Level.tscn" type="PackedScene" id=1]
-[ext_resource path="res://julian/Audio/Disco_Medusae.wav" type="AudioStream" id=2]
+[ext_resource path="res://Final/Music/Disco_Medusae.wav" type="AudioStream" id=2]
 [ext_resource path="res://julian/Sprites/background_1.png" type="Texture" id=3]
-[ext_resource path="res://julian/Platforms/Platform2.tscn" type="PackedScene" id=4]
-[ext_resource path="res://julian/Platforms/Platform3.tscn" type="PackedScene" id=5]
-[ext_resource path="res://julian/Platforms/Platform1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Final/Platforms/Platform2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Final/Platforms/Platform3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Final/Platforms/Platform1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Abdullah/Player.tscn" type="PackedScene" id=7]
+
+
 
 [node name="Level1" type="Node2D"]
 

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Disco_Medusae.wav-27dd061dad09aecb53365560a235dd43.sample"
+
+[deps]
+
+source_file="res://Final/Music/Disco_Medusae.wav"
+dest_files=[ "res://.import/Disco_Medusae.wav-27dd061dad09aecb53365560a235dd43.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
