@@ -4,13 +4,17 @@ export (int) var run_speed = 100
 export (int) var jump_speed = -600
 export (int) var gravity = 1200
 
+
 var velocity = Vector2()
 var midAir = false
+
+var timeElapsed = 0
 
 var jumpInput 
 var headInput
 var shake
 var stomp
+
 
 func get_input():
 	velocity.x = 0
@@ -25,6 +29,8 @@ func get_input():
 		velocity.y = jump_speed
 
 func _physics_process(delta):
+	timeElapsed += 1*delta
+	
 	get_input()
 
 	velocity.y += gravity * delta
@@ -38,17 +44,20 @@ func _physics_process(delta):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
 func animation_manager():
 	if is_on_floor():
 		if headInput:
 			$AnimationPlayer.play("Headbang")
+			timeElapsed = 0
 		elif shake:
 			$AnimationPlayer.play("Tailshake")
+			timeElapsed = 0
 		elif stomp:
 			$AnimationPlayer.play("Stomp")
-		else:
+			timeElapsed = 0
+		elif (timeElapsed > 1):
 			$AnimationPlayer.play("Walking")
 	else:
 		$AnimationPlayer.play("Jump")
