@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Sean/Levels/Level.gd" type="Script" id=1]
+[ext_resource path="res://Sean/Platforms/Platform1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sean/Audio/Disco Medusae.wav" type="AudioStream" id=5]
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 1 )
+platforms_path = NodePath("Platforms")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Timer" type="Timer" parent="AudioStreamPlayer"]
+
+[node name="Sprite" type="Sprite" parent="."]
+centered = false
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="Platform1" parent="Platforms" instance=ExtResource( 2 )]
+position = Vector2( 15.3316, 64.4802 )
+
+[node name="Platform2" parent="Platforms" instance=ExtResource( 2 )]
+position = Vector2( 40.1083, 53.1537 )
+
+[node name="Platform3" parent="Platforms" instance=ExtResource( 2 )]
+position = Vector2( 88.2459, 29.7928 )
+[connection signal="timeout" from="AudioStreamPlayer/Timer" to="." method="_on_Timer_timeout"]
