@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sean/Levels/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Abdullah/Player.tscn" type="PackedScene" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Level" parent="." instance=ExtResource( 1 )]
+scale = Vector2( 4, 4 )
+speed = 20
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40.7824, 221.746 )
+scale = Vector2( 50, 50 )
