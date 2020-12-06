@@ -2,6 +2,7 @@
 
 [resource]
 resource_name = "Enemy3"
+loop = true
 step = 0.01
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")

@@ -10,4 +10,6 @@ func _ready():
 
 func _physics_process(delta : float) -> void:
 	$StaticBody2D.position.x -= self.speed * delta
-	$Enemies.position.x -= self.speed * delta
+	
+	for enemy in $Enemies.get_children():
+		enemy.position.x -= self.speed * delta

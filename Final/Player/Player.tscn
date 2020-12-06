@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Final/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Final/Player/Animations/Walking.tres" type="Animation" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Abdullah/sprites1.png" type="Texture" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.5, 3 )
+
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 2.5, 3 )
 
 [node name="Player" type="KinematicBody2D"]
@@ -31,7 +34,8 @@ anims/Stomp = ExtResource( 4 )
 anims/Tailshake = ExtResource( 3 )
 anims/Walking = ExtResource( 2 )
 
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 0, -3 )
-enabled = true
-cast_to = Vector2( 4, 0 )
+[node name="EnemyDetector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyDetector"]
+position = Vector2( 5, -3 )
+shape = SubResource( 2 )
