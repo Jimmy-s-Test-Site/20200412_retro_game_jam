@@ -10,7 +10,6 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Level" parent="." instance=ExtResource( 4 )]
-position = Vector2( 49, 46 )
 platforms_path = NodePath("Platforms")
 enemies_path = NodePath("Enemies")
 player_path = NodePath("Player")
@@ -20,7 +19,7 @@ volume = 10.0
 speed = 50
 
 [node name="Platforms" type="Node2D" parent="Level"]
-position = Vector2( 68, -110 )
+position = Vector2( 162, -111 )
 
 [node name="Platform9" parent="Level/Platforms" instance=ExtResource( 2 )]
 position = Vector2( 53, 115 )
@@ -50,7 +49,7 @@ position = Vector2( 88, 119 )
 position = Vector2( 22, 5 )
 
 [node name="Enemies" type="Node2D" parent="Level"]
-position = Vector2( 68, -110 )
+position = Vector2( 189, -168 )
 
 [node name="Enemy1" parent="Level/Enemies" instance=ExtResource( 3 )]
 position = Vector2( 52, 109 )
