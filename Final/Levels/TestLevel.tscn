@@ -5,8 +5,7 @@
 [ext_resource path="res://Final/Enemies/Enemy1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Final/Levels/Level.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Final/Sprites/background_1.png" type="Texture" id=5]
-
-[sub_resource type="AudioStreamOGGVorbis" id=1]
+[ext_resource path="res://Final/Music/Disco_Medusae.ogg" type="AudioStream" id=6]
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,8 +14,9 @@ platforms_path = NodePath("../Platforms")
 enemies_path = NodePath("../Enemies")
 player_path = NodePath("../Player")
 background = ExtResource( 5 )
-audio = SubResource( 1 )
+audio = ExtResource( 6 )
 volume = 10.0
+timer = 0.1
 speed = 50
 
 [node name="Platforms" type="Node2D" parent="."]
