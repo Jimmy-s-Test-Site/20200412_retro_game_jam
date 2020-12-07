@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Final/Game.gd" type="Script" id=1]
 [ext_resource path="res://Final/Levels/Level_1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Final/GUI/Score.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Final/Death.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -25,6 +26,7 @@ shader_param/size_y = null
 [node name="Game" type="Node2D"]
 material = SubResource( 2 )
 script = ExtResource( 1 )
+raw_death_scene = ExtResource( 4 )
 raw_levels = [ ExtResource( 2 ) ]
 
 [node name="ScoreContainer" type="Node2D" parent="."]
