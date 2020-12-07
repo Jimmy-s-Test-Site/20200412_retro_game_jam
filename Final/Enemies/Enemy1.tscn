@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://julian/Sprites/sprites.png" type="Texture" id=1]
+[ext_resource path="res://Final/Enemies/Animations/Enemy1.tres" type="Animation" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2.5, 3 )
+
+[sub_resource type="AnimationNodeAnimation" id=2]
+animation = "Enemy1"
+
+[sub_resource type="AnimationNodeStateMachine" id=3]
+states/Enemy1/node = SubResource( 2 )
+states/Enemy1/position = Vector2( 419, 96 )
+start_node = "Enemy1"
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=4]
+
+[node name="Enemy1" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -3 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -3.5 )
+texture = ExtResource( 1 )
+hframes = 2
+region_enabled = true
+region_rect = Rect2( 42, 0, 14, 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Enemy1 = ExtResource( 3 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 3 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 4 )
