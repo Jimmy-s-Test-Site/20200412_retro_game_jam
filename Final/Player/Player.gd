@@ -3,9 +3,8 @@ extends KinematicBody2D
 signal dead
 signal earned_points
 
-export (int) var run_speed = 100
-export (int) var jump_speed = -600
-export (int) var gravity = 1200
+export (int) var jump_speed = -200
+export (int) var gravity = 450
 
 export (Dictionary) var animations = {
 	"stomp"     : 10,
@@ -52,7 +51,6 @@ func _physics_process(delta : float) -> void:
 	self.movement_manager(delta)
 	self.dance_manager()
 	self.animation_manager()
-	self.life_manager()
 
 # user defined functions
 
@@ -110,18 +108,6 @@ func dance_manager() -> void:
 				elif matching_dance[1]: emit_signal("earned_points", 10)
 				elif matching_dance[2]: emit_signal("earned_points", 15)
 				body.queue_free()
-
-func life_manager():
-	if self.enemy_detector.get_overlapping_bodies().size() > 0:
-		for i in self.get_slide_count():
-			var collision := self.get_slide_collision(i)
-			
-			if (
-				get_slide_collision(i).collider.name.begins_with("Enemy1") or
-				get_slide_collision(i).collider.name.begins_with("Enemy2") or
-				get_slide_collision(i).collider.name.begins_with("Enemy3")
-			):
-				pass#self.queue_free()
 
 func animation_manager() -> void:
 	if self.jumping:

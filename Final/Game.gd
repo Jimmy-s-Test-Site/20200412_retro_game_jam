@@ -15,7 +15,8 @@ func instance_rand_level():
 	var random_level = self.levels[random_index]
 	var scene_instance = random_level.instance()
 	
-	scene_instance.set_name("Level")
+	scene_instance.get_node("Level").connect("player_died", self, "_on_player_died")
+	scene_instance.get_node("Level").connect("player_earned_points", self, "_on_player_earned_points")
 	scene_instance.z_index = -1
 	add_child(scene_instance)
 	
@@ -29,3 +30,9 @@ func _ready():
 	rng.randomize()
 	self.load_levels()
 	self.instance_rand_level()
+
+func _on_player_died():
+	print("oops")
+
+func _on_player_earned_points(amount : float) -> void:
+	print("amount earned")
