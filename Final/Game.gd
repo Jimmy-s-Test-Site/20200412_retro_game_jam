@@ -16,7 +16,6 @@ func instance_rand_level():
 	var scene_instance = random_level.instance()
 	
 	scene_instance.set_name("Level")
-	#scene_instance.scale *= 4
 	add_child(scene_instance)
 
 func _ready():

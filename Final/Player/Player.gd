@@ -8,9 +8,9 @@ export (int) var jump_speed = -600
 export (int) var gravity = 1200
 
 export (Dictionary) var animations = {
-	"stomp": 10,
-	"headbang": 10,
-	"tailshake": 1
+	"stomp"     : 10,
+	"headbang"  : 10,
+	"tailshake" :  1
 }
 
 enum Dances {
@@ -100,9 +100,9 @@ func dance_manager() -> void:
 	if overlaping_bodies.size() > 0 and self.dancing:
 		for body in overlaping_bodies:
 			var matching_dance = [
-				self.dance == Dances.DANCE1 and body.name == "Enemy1",
-				self.dance == Dances.DANCE2 and body.name == "Enemy2",
-				self.dance == Dances.DANCE3 and body.name == "Enemy3"
+				self.dance == Dances.DANCE1 and body.name.begins_with("Enemy1"),
+				self.dance == Dances.DANCE2 and body.name.begins_with("Enemy2"),
+				self.dance == Dances.DANCE3 and body.name.begins_with("Enemy3")
 			]
 			
 			if matching_dance[0] or matching_dance[1] or matching_dance[2]:
@@ -110,8 +110,6 @@ func dance_manager() -> void:
 				elif matching_dance[1]: emit_signal("earned_points", 10)
 				elif matching_dance[2]: emit_signal("earned_points", 15)
 				body.queue_free()
-		#print(self.dance)
-		#print(self.raycast2d.get_collider().name)
 
 func life_manager():
 	if self.enemy_detector.get_overlapping_bodies().size() > 0:
