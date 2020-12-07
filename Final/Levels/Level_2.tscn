@@ -166,44 +166,11 @@ position = Vector2( 1, 0 )
 [node name="Enemy1" parent="Level/Enemies" instance=ExtResource( 8 )]
 position = Vector2( 56, 74 )
 
-[node name="Enemy1" parent="Level/Enemies/Enemy1" instance=ExtResource( 8 )]
-position = Vector2( 411, 0 )
-
-[node name="Enemy1" parent="Level/Enemies/Enemy1/Enemy1" instance=ExtResource( 8 )]
-position = Vector2( 40, 0 )
-
 [node name="Enemy2" parent="Level/Enemies" instance=ExtResource( 6 )]
 position = Vector2( 123, 74 )
 
-[node name="Enemy2" parent="Level/Enemies/Enemy2" instance=ExtResource( 6 )]
-position = Vector2( 235, -1 )
-
-[node name="Enemy2" parent="Level/Enemies/Enemy2/Enemy2" instance=ExtResource( 6 )]
-position = Vector2( -18, 0 )
-
-[node name="Enemy2" parent="Level/Enemies/Enemy2/Enemy2/Enemy2" instance=ExtResource( 6 )]
-position = Vector2( -59, 0 )
-
-[node name="Enemy2" parent="Level/Enemies/Enemy2/Enemy2/Enemy2/Enemy2" instance=ExtResource( 6 )]
-position = Vector2( 194, 1 )
-
-[node name="Enemy2" parent="Level/Enemies/Enemy2/Enemy2/Enemy2/Enemy2/Enemy2" instance=ExtResource( 6 )]
-position = Vector2( 16, 0 )
-
-[node name="Enemy3" parent="Level/Enemies/Enemy2/Enemy2/Enemy2/Enemy2/Enemy2" instance=ExtResource( 6 )]
-position = Vector2( 24, 0 )
-
 [node name="Enemy3" parent="Level/Enemies" instance=ExtResource( 7 )]
 position = Vector2( 194, 74 )
-
-[node name="Enemy3" parent="Level/Enemies/Enemy3" instance=ExtResource( 7 )]
-position = Vector2( 440, -1 )
-
-[node name="Enemy3" parent="Level/Enemies/Enemy3/Enemy3" instance=ExtResource( 7 )]
-position = Vector2( 0, -6 )
-
-[node name="Enemy3" parent="Level/Enemies/Enemy3/Enemy3/Enemy3" instance=ExtResource( 7 )]
-position = Vector2( -151, 7 )
 
 [node name="Enemy1a" parent="Level/Enemies" instance=ExtResource( 8 )]
 position = Vector2( 258, 74 )
@@ -220,8 +187,43 @@ position = Vector2( 295, 68 )
 [node name="Enemy1e" parent="Level/Enemies" instance=ExtResource( 8 )]
 position = Vector2( 387, 73 )
 
+[node name="Enemy1f" parent="Level/Enemies" instance=ExtResource( 8 )]
+position = Vector2( 507, 74 )
+
+[node name="Enemy1g" parent="Level/Enemies" instance=ExtResource( 8 )]
+position = Vector2( 467, 74 )
+
+[node name="Enemy3c" parent="Level/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 634, 73 )
+
+[node name="Enemy3a" parent="Level/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 483, 74 )
+
+[node name="Enemy3b" parent="Level/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 634, 67 )
+
+[node name="Enemy2a" parent="Level/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 358, 73 )
+
+[node name="Enemy2b" parent="Level/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 340, 73 )
+
+[node name="Enemy2c" parent="Level/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 281, 73 )
+
+[node name="Enemy2d" parent="Level/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 475, 74 )
+
+[node name="Enemy2e" parent="Level/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 491, 74 )
+
+[node name="Enemy2f" parent="Level/Enemies" instance=ExtResource( 6 )]
+position = Vector2( 499, 74 )
+
 [node name="Player" parent="Level" instance=ExtResource( 3 )]
-position = Vector2( 5, 74 )
+position = Vector2( 18, 74 )
+jump_speed = -200
+gravity = 450
 animations = {
 "headbang": 10,
 "stomp": 11,
@@ -230,3 +232,4 @@ animations = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
+autoplay = true
