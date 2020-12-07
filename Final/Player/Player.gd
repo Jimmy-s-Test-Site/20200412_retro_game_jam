@@ -116,11 +116,11 @@ func life_manager():
 		for i in self.get_slide_count():
 			var collision := self.get_slide_collision(i)
 			
-			if ([
-				"Enemy1",
-				"Enemy2",
-				"Enemy3"
-			].has(get_slide_collision(i).collider.name)):
+			if (
+				get_slide_collision(i).collider.name.begins_with("Enemy1") or
+				get_slide_collision(i).collider.name.begins_with("Enemy2") or
+				get_slide_collision(i).collider.name.begins_with("Enemy3")
+			):
 				pass#self.queue_free()
 
 func animation_manager() -> void:
