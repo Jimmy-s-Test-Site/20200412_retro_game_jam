@@ -16,9 +16,16 @@ func instance_rand_level():
 	var scene_instance = random_level.instance()
 	
 	scene_instance.set_name("Level")
+	scene_instance.z_index = -1
 	add_child(scene_instance)
+	
+	$ScoreContainer.scale *= get_viewport().size / Vector2(
+		ProjectSettings.get("display/window/size/width"),
+		ProjectSettings.get("display/window/size/height")
+	)
 
 func _ready():
+	OS.window_size = Vector2(384,384)
 	rng.randomize()
 	self.load_levels()
 	self.instance_rand_level()
