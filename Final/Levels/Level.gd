@@ -34,6 +34,7 @@ func _ready():
 	self._on__node_ready(self.player_path, "Please add a player folder")
 	
 	$Sprite.texture = self.background
+	#$AudioStreamPlayer.loop = false
 	$AudioStreamPlayer.stream = self.audio
 	$AudioStreamPlayer.volume_db = self.volume
 	
