@@ -7,6 +7,12 @@ export (int) var run_speed = 100
 export (int) var jump_speed = -600
 export (int) var gravity = 1200
 
+export (Dictionary) var animations = {
+	"stomp": 10,
+	"headbang": 10,
+	"tailshake": 1
+}
+
 enum Dances {
 	NONE   = 0,
 	DANCE1 = 1,
@@ -123,8 +129,8 @@ func animation_manager() -> void:
 	if self.jumping:
 		play_at_speed("Jump", 10)
 	elif self.dancing:
-		if   self.input.action1: play_at_speed("Stomp", 10)
-		elif self.input.action2: play_at_speed("Headbang", 10)
-		elif self.input.action3: play_at_speed("Tailshake", 1)
+		if   self.input.action1: play_at_speed("Stomp", self.animations.stomp)
+		elif self.input.action2: play_at_speed("Headbang", self.animations.headbang)
+		elif self.input.action3: play_at_speed("Tailshake", self.animations.tailshake)
 	else:
 		play_at_speed("Walking", 2)
