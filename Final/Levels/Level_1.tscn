@@ -190,6 +190,8 @@ position = Vector2( 396, 220 )
 
 [node name="Player" parent="Level" instance=ExtResource( 1 )]
 position = Vector2( 7, 91 )
+jump_speed = -200
+gravity = 450
 animations = {
 "headbang": 10,
 "stomp": 11,
