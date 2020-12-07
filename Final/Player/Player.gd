@@ -1,8 +1,17 @@
 extends KinematicBody2D
 
+signal dead
+signal earned_points
+
 export (int) var run_speed = 100
 export (int) var jump_speed = -600
 export (int) var gravity = 1200
+
+export (Dictionary) var animations = {
+	"stomp": 10,
+	"headbang": 10,
+	"tailshake": 1
+}
 
 enum Dances {
 	NONE   = 0,
@@ -90,13 +99,16 @@ func dance_manager() -> void:
 	var overlaping_bodies = self.enemy_detector.get_overlapping_bodies()
 	if overlaping_bodies.size() > 0 and self.dancing:
 		for body in overlaping_bodies:
-			var matching_dance = (
-				(self.dance == Dances.DANCE1 and body.name == "Enemy1") or
-				(self.dance == Dances.DANCE2 and body.name == "Enemy2") or
-				(self.dance == Dances.DANCE3 and body.name == "Enemy3")
-			)
+			var matching_dance = [
+				self.dance == Dances.DANCE1 and body.name == "Enemy1",
+				self.dance == Dances.DANCE2 and body.name == "Enemy2",
+				self.dance == Dances.DANCE3 and body.name == "Enemy3"
+			]
 			
-			if matching_dance:
+			if matching_dance[0] or matching_dance[1] or matching_dance[2]:
+				if   matching_dance[0]: emit_signal("earned_points",  5)
+				elif matching_dance[1]: emit_signal("earned_points", 10)
+				elif matching_dance[2]: emit_signal("earned_points", 15)
 				body.queue_free()
 		#print(self.dance)
 		#print(self.raycast2d.get_collider().name)
@@ -117,11 +129,8 @@ func animation_manager() -> void:
 	if self.jumping:
 		play_at_speed("Jump", 10)
 	elif self.dancing:
-		if self.input.action1:
-			play_at_speed("Stomp", 10)
-		elif self.input.action2:
-			play_at_speed("Headbang", 10)
-		elif self.input.action3:
-			play_at_speed("Tailshake", 1)
+		if   self.input.action1: play_at_speed("Stomp", self.animations.stomp)
+		elif self.input.action2: play_at_speed("Headbang", self.animations.headbang)
+		elif self.input.action3: play_at_speed("Tailshake", self.animations.tailshake)
 	else:
 		play_at_speed("Walking", 2)

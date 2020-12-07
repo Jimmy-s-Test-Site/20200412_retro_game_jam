@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://julian/Sprites/platform_1.png" type="Texture" id=1]
+[ext_resource path="res://Final/Sprites/platform_1.png" type="Texture" id=1]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7, 2 )
