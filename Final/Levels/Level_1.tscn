@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Final/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Final/Platforms/Platform3.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Final/Enemies/Enemy1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Final/Levels/Level.tscn" type="PackedScene" id=4]
+[ext_resource path="res://julian/Sprites/background_1.png" type="Texture" id=5]
+[ext_resource path="res://Final/Music/Disco_Medusae.wav" type="AudioStream" id=6]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Level" parent="." instance=ExtResource( 4 )]
+position = Vector2( 49, 46 )
+platforms_path = NodePath("Platforms")
+enemies_path = NodePath("Enemies")
+player_path = NodePath("Player")
+background = ExtResource( 5 )
+audio = ExtResource( 6 )
+volume = 10.0
+speed = 50
+
+[node name="Platforms" type="Node2D" parent="Level"]
+position = Vector2( 68, -110 )
+
+[node name="Platform9" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 53, 115 )
+
+[node name="Platform10" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 67, 114 )
+
+[node name="Platform3" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( -52, 146 )
+
+[node name="Platform4" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( -27, 129 )
+
+[node name="Platform5" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( -6, 118 )
+
+[node name="Platform6" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( -43, 120 )
+
+[node name="Platform7" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 33, 125 )
+
+[node name="Platform8" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 88, 119 )
+
+[node name="Player" parent="Level" instance=ExtResource( 1 )]
+position = Vector2( 22, 5 )
+
+[node name="Enemies" type="Node2D" parent="Level"]
+position = Vector2( 68, -110 )
+
+[node name="Enemy1" parent="Level/Enemies" instance=ExtResource( 3 )]
+position = Vector2( 52, 109 )
