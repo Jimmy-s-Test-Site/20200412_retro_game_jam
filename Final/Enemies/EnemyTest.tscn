@@ -1,11 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://Final/Enemies/EnemyTest.gd" type="Script" id=2]
 [ext_resource path="res://Final/Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Final/Enemies/Enemy2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Final/Enemies/Enemy1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Final/Enemies/Enemy3.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
@@ -16,6 +14,11 @@ speed = 5
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 18, 70 )
+animations = {
+"headbang": 10,
+"stomp": 11,
+"tailshake": 1
+}
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 49, 78 )
@@ -35,8 +38,5 @@ shape = SubResource( 1 )
 [node name="Enemy1" parent="Enemies" instance=ExtResource( 5 )]
 position = Vector2( 35, 70 )
 
-[node name="Enemy3" parent="Enemies" instance=ExtResource( 6 )]
-position = Vector2( 70, 70 )
-
-[node name="Enemy2" parent="Enemies" instance=ExtResource( 4 )]
-position = Vector2( 52, 70 )
+[node name="Enemy1A" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 61, 70 )

@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Disco_Medusae.ogg-26987040e309b5cf6c4ae776b82e62a6.o
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
