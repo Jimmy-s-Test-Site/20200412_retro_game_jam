@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Stringed_Disco.wav-c706af5c143bf0b4d234eb380786b1eb.sample"
+
+[deps]
+
+source_file="res://Music/Stringed_Disco.wav"
+dest_files=[ "res://.import/Stringed_Disco.wav-c706af5c143bf0b4d234eb380786b1eb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

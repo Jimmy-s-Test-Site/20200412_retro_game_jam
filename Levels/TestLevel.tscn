@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Levels/Level.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Platforms/Platform2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Sprites/background_2.png" type="Texture" id=7]
+[ext_resource path="res://Music/Stringed_Disco.ogg" type="AudioStream" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 87 )
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="Level" parent="." instance=ExtResource( 2 )]
+platforms_path = NodePath("../Platforms")
+enemies_path = NodePath("../Enemies")
+player_path = NodePath("../Player")
+win_path = NodePath("../Win")
+background = ExtResource( 7 )
+speed = 30
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="Platform2" parent="Platforms" instance=ExtResource( 6 )]
+position = Vector2( 7, 74 )
+
+[node name="Platform3" parent="Platforms" instance=ExtResource( 6 )]
+position = Vector2( 21, 74 )
+
+[node name="Platform4" parent="Platforms" instance=ExtResource( 6 )]
+position = Vector2( 35, 74 )
+
+[node name="Platform5" parent="Platforms" instance=ExtResource( 6 )]
+position = Vector2( 49, 74 )
+
+[node name="Platform6" parent="Platforms" instance=ExtResource( 6 )]
+position = Vector2( 63, 74 )
+
+[node name="Platform7" parent="Platforms" instance=ExtResource( 6 )]
+position = Vector2( 77, 74 )
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6, 65 )
+animations = {
+"headbang": 10,
+"stomp": 11,
+"tailshake": 1
+}
+
+[node name="Win" type="Area2D" parent="."]
+position = Vector2( 97, 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win"]
+shape = SubResource( 1 )

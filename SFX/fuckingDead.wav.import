@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fuckingDead.wav-db07b94fdf2709ec20b9a4590edf52d7.sample"
+
+[deps]
+
+source_file="res://SFX/fuckingDead.wav"
+dest_files=[ "res://.import/fuckingDead.wav-db07b94fdf2709ec20b9a4590edf52d7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
