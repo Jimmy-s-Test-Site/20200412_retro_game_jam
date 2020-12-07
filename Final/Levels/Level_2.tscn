@@ -3,7 +3,7 @@
 [ext_resource path="res://Final/Levels/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Final/Platforms/Platform2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Final/Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Final/Music/Disco_Medusae.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Final/Music/Stringed_Disco.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Final/Sprites/background_2.png" type="Texture" id=5]
 [ext_resource path="res://Final/Enemies/Enemy2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Final/Enemies/Enemy3.tscn" type="PackedScene" id=7]
@@ -222,8 +222,6 @@ position = Vector2( 499, 74 )
 
 [node name="Player" parent="Level" instance=ExtResource( 3 )]
 position = Vector2( 18, 74 )
-jump_speed = -200
-gravity = 450
 animations = {
 "headbang": 10,
 "stomp": 11,
