@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/background_1.png-6c4de8b602cd2f5e5cdb53ee1eb7d7d5.stex"
+path="res://.import/sprites1.png-225313fbaedc30ac3c6dcbdedc68aede.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://julian/Sprites/background_1.png"
-dest_files=[ "res://.import/background_1.png-6c4de8b602cd2f5e5cdb53ee1eb7d7d5.stex" ]
+source_file="res://Final/Sprites/sprites1.png"
+dest_files=[ "res://.import/sprites1.png-225313fbaedc30ac3c6dcbdedc68aede.stex" ]
 
 [params]
 

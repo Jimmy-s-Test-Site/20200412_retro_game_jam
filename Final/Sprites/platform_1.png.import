@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/platform_3.png-ef38e3199db7f43e8c2ee777c39dcc78.stex"
+path="res://.import/platform_1.png-5972093361c6cd489e1ca490c9dc3a24.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://julian/Sprites/platform_3.png"
-dest_files=[ "res://.import/platform_3.png-ef38e3199db7f43e8c2ee777c39dcc78.stex" ]
+source_file="res://Final/Sprites/platform_1.png"
+dest_files=[ "res://.import/platform_1.png-5972093361c6cd489e1ca490c9dc3a24.stex" ]
 
 [params]
 
