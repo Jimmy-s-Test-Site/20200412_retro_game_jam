@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Final/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Final/Platforms/Platform3.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Final/Enemies/Enemy1.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Final/Levels/Level.tscn" type="PackedScene" id=4]
-[ext_resource path="res://julian/Sprites/background_1.png" type="Texture" id=5]
-[ext_resource path="res://Final/Music/Disco_Medusae.wav" type="AudioStream" id=6]
+[ext_resource path="res://Final/Sprites/background_1.png" type="Texture" id=5]
+[ext_resource path="res://Final/Music/Disco_Medusae.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Final/Enemies/Enemy3.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Final/Platforms/Platform1.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Final/Enemies/Enemy2.tscn" type="PackedScene" id=9]
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,42 +17,185 @@ platforms_path = NodePath("Platforms")
 enemies_path = NodePath("Enemies")
 player_path = NodePath("Player")
 background = ExtResource( 5 )
-audio = ExtResource( 6 )
 volume = 10.0
-speed = 50
+speed = 30
 
 [node name="Platforms" type="Node2D" parent="Level"]
 position = Vector2( 162, -111 )
 
 [node name="Platform9" parent="Level/Platforms" instance=ExtResource( 2 )]
-position = Vector2( 53, 115 )
+position = Vector2( -61, 184 )
 
 [node name="Platform10" parent="Level/Platforms" instance=ExtResource( 2 )]
-position = Vector2( 67, 114 )
+position = Vector2( -47, 184 )
 
 [node name="Platform3" parent="Level/Platforms" instance=ExtResource( 2 )]
-position = Vector2( -52, 146 )
+position = Vector2( -151, 202 )
 
 [node name="Platform4" parent="Level/Platforms" instance=ExtResource( 2 )]
-position = Vector2( -27, 129 )
+position = Vector2( -116, 174 )
 
 [node name="Platform5" parent="Level/Platforms" instance=ExtResource( 2 )]
-position = Vector2( -6, 118 )
+position = Vector2( -106, 174 )
 
 [node name="Platform6" parent="Level/Platforms" instance=ExtResource( 2 )]
-position = Vector2( -43, 120 )
+position = Vector2( -137, 202 )
 
 [node name="Platform7" parent="Level/Platforms" instance=ExtResource( 2 )]
-position = Vector2( 33, 125 )
+position = Vector2( -77, 146 )
 
 [node name="Platform8" parent="Level/Platforms" instance=ExtResource( 2 )]
-position = Vector2( 88, 119 )
+position = Vector2( -38, 143 )
 
-[node name="Player" parent="Level" instance=ExtResource( 1 )]
-position = Vector2( 22, 5 )
+[node name="Platform11" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( -3, 193 )
+
+[node name="Platform12" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 119, 170 )
+
+[node name="Platform13" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( -26, 143 )
+
+[node name="Platform14" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( -12, 143 )
+
+[node name="Platform15" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( -30, 193 )
+
+[node name="Platform16" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( -16, 193 )
+
+[node name="Platform17" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( -83, 202 )
+
+[node name="Platform18" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 11, 193 )
+
+[node name="Platform19" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 24, 193 )
+
+[node name="Platform20" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 35, 161 )
+
+[node name="Platform21" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 48, 161 )
+
+[node name="Platform22" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 62, 170 )
+
+[node name="Platform23" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 76, 170 )
+
+[node name="Platform24" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 134, 170 )
+
+[node name="Platform25" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 90, 170 )
+
+[node name="Platform26" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 45, 200 )
+
+[node name="Platform27" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 58, 200 )
+
+[node name="Platform28" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 72, 200 )
+
+[node name="Platform29" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 86, 200 )
+
+[node name="Platform30" parent="Level/Platforms" instance=ExtResource( 2 )]
+position = Vector2( 100, 200 )
+
+[node name="Platform1" parent="Level/Platforms" instance=ExtResource( 8 )]
+position = Vector2( 163, 169 )
+
+[node name="Platform1" parent="Level/Platforms/Platform1" instance=ExtResource( 8 )]
+position = Vector2( 37, -19 )
+
+[node name="Platform2" parent="Level/Platforms/Platform1" instance=ExtResource( 8 )]
+position = Vector2( 63, -38 )
+
+[node name="Platform3" parent="Level/Platforms/Platform1" instance=ExtResource( 8 )]
+position = Vector2( 92, -52 )
+
+[node name="Platform1" parent="Level/Platforms/Platform1/Platform3" instance=ExtResource( 8 )]
+position = Vector2( 34, 76 )
+
+[node name="Platform1" parent="Level/Platforms/Platform1/Platform3/Platform1" instance=ExtResource( 8 )]
+position = Vector2( 13, 0 )
+
+[node name="Platform2" parent="Level/Platforms" instance=ExtResource( 8 )]
+position = Vector2( 177, 169 )
+
+[node name="Platform1" parent="Level/Platforms/Platform2" instance=ExtResource( 8 )]
+position = Vector2( 14, 0 )
+
+[node name="Platform31" parent="Level/Platforms" instance=ExtResource( 8 )]
+position = Vector2( 351, 165 )
+
+[node name="Platform1" parent="Level/Platforms/Platform31" instance=ExtResource( 8 )]
+position = Vector2( 14, 0 )
+
+[node name="Platform2" parent="Level/Platforms/Platform31" instance=ExtResource( 8 )]
+position = Vector2( 28, 0 )
+
+[node name="Platform32" parent="Level/Platforms" instance=ExtResource( 8 )]
+position = Vector2( 325, 175 )
+
+[node name="Platform33" parent="Level/Platforms" instance=ExtResource( 8 )]
+position = Vector2( 404, 164 )
+
+[node name="Platform34" parent="Level/Platforms" instance=ExtResource( 8 )]
+position = Vector2( 420, 164 )
+
+[node name="Platform35" parent="Level/Platforms" instance=ExtResource( 8 )]
+position = Vector2( 436, 164 )
+
+[node name="Enemy1" parent="Level/Platforms" instance=ExtResource( 3 )]
+position = Vector2( 434, 163 )
 
 [node name="Enemies" type="Node2D" parent="Level"]
 position = Vector2( 189, -168 )
 
 [node name="Enemy1" parent="Level/Enemies" instance=ExtResource( 3 )]
-position = Vector2( 52, 109 )
+position = Vector2( -72, 241 )
+
+[node name="Enemy3" parent="Level/Enemies" instance=ExtResource( 7 )]
+position = Vector2( 39, 256 )
+
+[node name="Enemy11" parent="Level/Enemies" instance=ExtResource( 3 )]
+position = Vector2( -43, 200 )
+
+[node name="Enemy12" parent="Level/Enemies" instance=ExtResource( 3 )]
+position = Vector2( -50, 200 )
+
+[node name="Enemy13" parent="Level/Enemies" instance=ExtResource( 3 )]
+position = Vector2( 22, 256 )
+
+[node name="Enemy14" parent="Level/Enemies" instance=ExtResource( 3 )]
+position = Vector2( 29, 256 )
+
+[node name="Enemy15" parent="Level/Enemies" instance=ExtResource( 3 )]
+position = Vector2( 167, 225 )
+
+[node name="Enemy16" parent="Level/Enemies" instance=ExtResource( 3 )]
+position = Vector2( 110, 226 )
+
+[node name="Enemy2" parent="Level/Enemies" instance=ExtResource( 9 )]
+position = Vector2( 386, 220 )
+
+[node name="Enemy17" parent="Level/Enemies" instance=ExtResource( 3 )]
+position = Vector2( 396, 220 )
+
+[node name="Player" parent="Level" instance=ExtResource( 1 )]
+position = Vector2( 7, 91 )
+animations = {
+"headbang": 10,
+"stomp": 11,
+"tailshake": 1
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+autoplay = true
