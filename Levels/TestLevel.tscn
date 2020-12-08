@@ -7,7 +7,7 @@
 [ext_resource path="res://Music/Stringed_Disco.ogg" type="AudioStream" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10, 87 )
+extents = Vector2( 10, 49 )
 
 [node name="TestLevel" type="Node2D"]
 
@@ -46,7 +46,7 @@ position = Vector2( 77, 74 )
 [node name="Enemies" type="Node2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6, 65 )
+position = Vector2( 3, 68 )
 animations = {
 "headbang": 10,
 "stomp": 11,
@@ -54,10 +54,7 @@ animations = {
 }
 
 [node name="Win" type="Area2D" parent="."]
-position = Vector2( 97, 55 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Win"]
+position = Vector2( 95, 56 )
 shape = SubResource( 1 )

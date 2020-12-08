@@ -1,16 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
-[ext_resource path="res://Levels/Level1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Levels/Level2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://GUI/Score.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Death.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Levels/Level2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Score.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Levels/Level3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Levels/Level1.tscn" type="PackedScene" id=7]
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
 raw_death_scene = ExtResource( 4 )
-raw_levels = [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ) ]
+raw_score_scene = ExtResource( 5 )
+raw_levels = [ ExtResource( 7 ), ExtResource( 2 ), ExtResource( 6 ) ]
 
 [node name="ScoreContainer" type="Node2D" parent="."]
 z_index = 1
