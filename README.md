@@ -1,6 +1,6 @@
 # DiscoCock
 
-`codename 20201204_retro_game_jam`
+`codename: 20201204_retro_game_jam`
 
 `link:` https://jaacko-torus.itch.io/discocock
 
